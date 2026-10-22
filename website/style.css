@@ -1,0 +1,229 @@
+/* General page design */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #243047;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #142850, #3157a4);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #e0e8ff;
+}
+
+/* Navigation bar */
+nav {
+    background: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    box-shadow: 0 2px 8px #00000010;
+}
+
+nav a {
+    text-decoration: none;
+    color: #23458b;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e07832;
+}
+
+/* Main content */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    margin-bottom: 28px;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px #24304712;
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    color: #19376d;
+    margin-bottom: 18px;
+}
+
+/* Dashboard cards */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background: #eef3ff;
+    border-left: 5px solid #3157a4;
+    padding: 22px 12px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 30px;
+    color: #23458b;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+/* Form fields */
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd4e0;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* Buttons */
+button {
+    background: #23458b;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+button:hover {
+    background: #142850;
+}
+
+/* Browse items and match cards */
+#search,
+#filterType {
+    margin-bottom: 14px;
+}
+
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 15px;
+}
+
+.item-card {
+    border: 1px solid #e0e6f0;
+    border-radius: 10px;
+    padding: 18px;
+    background: #fbfcff;
+}
+
+.item-card h3 {
+    color: #19376d;
+    margin-bottom: 8px;
+}
+
+.item-card p {
+    margin: 5px 0;
+    overflow-wrap: anywhere;
+}
+
+.status {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #e4edff;
+    color: #23458b;
+    margin-bottom: 8px;
+}
+
+.match-score {
+    color: #147d52;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#message {
+    margin-top: 12px;
+    color: #147d52;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #142850;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 700px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item-list {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 18px;
+    }
+}
