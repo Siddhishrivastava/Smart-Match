@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartMatch | Campus Lost & Found</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="website/style.css">
+</head>
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>SmartMatch</h1>
+        <p>Campus Lost & Found Management System</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#report">Report Item</a>
+        <a href="#items">Browse Items</a>
+        <a href="#matches">Smart Matches</a>
+    </nav>
+
+    <main>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+
+            <div class="stats">
+                <div class="card">
+                    <h3 id="lostCount">0</h3>
+                    <p>Lost Items</p>
+                </div>
+
+                <div class="card">
+                    <h3 id="foundCount">0</h3>
+                    <p>Found Items</p>
+                </div>
+
+                <div class="card">
+                    <h3 id="matchCount">0</h3>
+                    <p>Possible Matches</p>
+                </div>
+
+                <div class="card">
+                    <h3 id="resolvedCount">0</h3>
+                    <p>Resolved Cases</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Report Item Section -->
+        <section id="report">
+            <h2>Report a Lost or Found Item</h2>
+
+            <form id="itemForm">
+
+                <label for="type">Report Type</label>
+                <select id="type" required>
+                    <option value="Lost">Lost Item</option>
+                    <option value="Found">Found Item</option>
+                </select>
+
+                <label for="name">Item Name</label>
+                <input type="text" id="name"
+                       placeholder="e.g. Scientific Calculator" required>
+
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="Electronics">Electronics</option>
+                    <option value="ID Card">ID Card</option>
+                    <option value="Bottle">Bottle</option>
+                    <option value="Books">Books</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="location">Campus Location</label>
+                <select id="location" required>
+                    <option value="Academic Block">Academic Block</option>
+                    <option value="Library">Library</option>
+                    <option value="Canteen">Canteen</option>
+                    <option value="Sports Ground">Sports Ground</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+
+                <label for="description">Description</label>
+                <textarea id="description"
+                          placeholder="Describe the item..." required></textarea>
+
+                <button type="submit">Submit Report</button>
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <!-- Browse Items Section -->
+        <section id="items">
+            <h2>Browse Items</h2>
+
+            <input type="text" id="search"
+                   placeholder="Search items...">
+
+            <select id="filterType">
+                <option value="All">All Reports</option>
+                <option value="Lost">Lost Items</option>
+                <option value="Found">Found Items</option>
+            </select>
+
+            <div id="itemList" class="item-list"></div>
+        </section>
+
+        <!-- Smart Matches Section -->
+        <section id="matches">
+            <h2>Smart Matches</h2>
+            <p>Possible matches based on category, location and keywords.</p>
+            <div id="matchList" class="item-list"></div>
+        </section>
+
+    </main>
+
+    <!-- Website Footer -->
+    <footer>
+        <p>SmartMatch | Helping campus belongings find their owners</p>
+    </footer>
+
+    <!-- Connect JavaScript file -->
+    <script src="website/script.js"></script>
+
+</body>
+</html>
